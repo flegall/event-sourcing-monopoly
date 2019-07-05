@@ -4,7 +4,7 @@ import { defaultPlaces, aPlayer, aStartedState } from "./builders";
 
 describe("apply()", () => {
   describe("GameInitiated", () => {
-    it("should reset the current game", () => {
+    xit("should reset the current game", () => {
       const state: State = {
         started: true,
         currentPlayerId: "b",
@@ -54,7 +54,7 @@ describe("apply()", () => {
   });
 
   describe("PlayerPositionChanged", () => {
-    it("should increase a players position", () => {
+    xit("should increase a players position", () => {
       const players = [aPlayer({ id: "a", position: 0 }), aPlayer({ id: "b" })];
       const state = aStartedState({ currentPlayerId: "a", players });
 
@@ -75,7 +75,7 @@ describe("apply()", () => {
   });
 
   describe("QuestionAsked", () => {
-    it("should ask a question to the current player", () => {
+    xit("should ask a question to the current player", () => {
       const players = [aPlayer({ id: "a", position: 2 }), aPlayer({ id: "b" })];
       const state = aStartedState({ currentPlayerId: "a", players });
 

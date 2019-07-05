@@ -5,7 +5,7 @@ import { State, Command, Event } from "./types";
 import { defaultPlaces, emptyState } from "./builders";
 
 describe("event sourcing", () => {
-  it("should initialize the event-sourcing system and accept the InitGame command", () => {
+  xit("should initialize the event-sourcing system and accept the InitGame command", () => {
     // given
     const saveEvent = jest.fn();
     const eventSourcing = new EventSourcing<State, Command, Event>(
@@ -40,7 +40,7 @@ describe("event sourcing", () => {
     });
   });
 
-  it("should initialize the event-sourcing system from existing events", () => {
+  xit("should initialize the event-sourcing system from existing events", () => {
     // given
     const eventSourcing = new EventSourcing<State, Command, Event>(
       decide,

@@ -7,7 +7,7 @@ jest.mock("./dices");
 
 describe("decide()", () => {
   describe("InitGame command", () => {
-    it("should emit GameInitiated event", () => {
+    xit("should emit GameInitiated event", () => {
       const players = ["a", "b", "c", "d"];
       const state = emptyState();
 
@@ -22,7 +22,7 @@ describe("decide()", () => {
   });
 
   describe("RollDices", () => {
-    it(`should reject RollDices when an unwanted player roll dices`, () => {
+    xit(`should reject RollDices when an unwanted player roll dices`, () => {
       const players = [aPlayer({ id: "a" }), aPlayer({ id: "b" })];
       const state = aStartedState({ currentPlayerId: "b", players });
 
@@ -35,7 +35,7 @@ describe("decide()", () => {
       expect(events).toEqual([]);
     });
 
-    it(`should ask a buy property question and move player when visiting an unowned property`, () => {
+    xit(`should ask a buy property question and move player when visiting an unowned property`, () => {
       const players = [aPlayer({ id: "a", position: 0 }), aPlayer({ id: "b" })];
       const state = aStartedState({ currentPlayerId: "a", players });
       (dices.rollDices as any).mockReturnValue(2);
